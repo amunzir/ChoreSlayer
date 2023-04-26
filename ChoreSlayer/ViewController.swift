@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redBarImageView: UIImageView!
     @IBOutlet weak var MonsterName: UILabel!
     @IBOutlet weak var HealthBar: UIImageView!
     @IBOutlet weak var HealthLabel: UILabel!
@@ -24,6 +25,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         MonsterName.text = monsterName
         HealthLabel.text = "\(monsterHealthTotal)/\(monsterHealthTotal)"
+        
+        redBarImageView.frame.size.width = 260
+        redBarImageView.frame.size.height = 48
+        redBarImageView.frame.origin = CGPoint(x: 66.67, y: 585)
+        redBarImageView.contentMode = UIView.ContentMode.scaleToFill
+        
     }
 
     @IBAction func AttackPressed(_ sender: UIButton) {
@@ -33,10 +40,7 @@ class ViewController: UIViewController {
         let newWidth = CGFloat(CGFloat(healthBarSize) * (1.0-barMultipier))
         print(barMultipier)
         print(newWidth)
-        /*HealthBar.frame = CGRectMake(
-                     HealthBar.frame.origin.x,
-                     HealthBar.frame.origin.y, newWidth, 50);
-         not quite working*/
+        redBarImageView.frame.size.width = newWidth
     }
     
 }
