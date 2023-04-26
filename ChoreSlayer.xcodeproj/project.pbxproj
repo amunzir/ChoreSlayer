@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13DC54B29F9C77B00A487FB /* ChoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13DC54A29F9C77B00A487FB /* ChoreTableViewController.swift */; };
 		C1889ACF29F86E3700857621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1889ACE29F86E3700857621 /* AppDelegate.swift */; };
 		C1889AD129F86E3700857621 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1889AD029F86E3700857621 /* SceneDelegate.swift */; };
 		C1889AD329F86E3700857621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1889AD229F86E3700857621 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C13DC54A29F9C77B00A487FB /* ChoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreTableViewController.swift; sourceTree = "<group>"; };
 		C1889ACB29F86E3700857621 /* ChoreSlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreSlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1889ACE29F86E3700857621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1889AD029F86E3700857621 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C1889AD029F86E3700857621 /* SceneDelegate.swift */,
 				C1889AD229F86E3700857621 /* ViewController.swift */,
 				C1889AD429F86E3700857621 /* Main.storyboard */,
+				C13DC54A29F9C77B00A487FB /* ChoreTableViewController.swift */,
 				C1889ADA29F86E3C00857621 /* Assets.xcassets */,
 				C1889ADC29F86E3C00857621 /* LaunchScreen.storyboard */,
 				C1889ADF29F86E3C00857621 /* Info.plist */,
@@ -264,6 +267,7 @@
 				C1889AD329F86E3700857621 /* ViewController.swift in Sources */,
 				C1889AD929F86E3800857621 /* ChoreSlayer.xcdatamodeld in Sources */,
 				C1889ACF29F86E3700857621 /* AppDelegate.swift in Sources */,
+				C13DC54B29F9C77B00A487FB /* ChoreTableViewController.swift in Sources */,
 				C1889AD129F86E3700857621 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
