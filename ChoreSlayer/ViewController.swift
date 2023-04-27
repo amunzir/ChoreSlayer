@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var monsterHealthTotal = 150
     var monsterName = "Mike W."
-    var healthBarSize = 260
+    var healthBarSize = 255
     var damageDone = 0
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         MonsterName.text = monsterName
         HealthLabel.text = "\(monsterHealthTotal)/\(monsterHealthTotal)"
         
-        redBarImageView.frame.size.width = 260
+        redBarImageView.frame.size.width = CGFloat(healthBarSize)
         redBarImageView.frame.size.height = 48
         redBarImageView.frame.origin = CGPoint(x: 66.67, y: 585)
         redBarImageView.contentMode = UIView.ContentMode.scaleToFill

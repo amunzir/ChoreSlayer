@@ -7,11 +7,41 @@
 
 import UIKit
 
+struct Chore {
+    var choreName: String
+    var chorePoints: Int
+}
+
 class ChoreTableViewController: UITableViewController {
 
+    var kitchen = [
+        Chore(choreName: "Clean Stove", chorePoints: 5),
+        Chore(choreName: "Sweep Floor", chorePoints: 5),
+        Chore(choreName: "Clean Fridge", chorePoints: 10)
+    ]
+    var bedroom = [
+        Chore(choreName: "Organize Vanity", chorePoints: 5),
+        Chore(choreName: "Clear Desk", chorePoints: 15),
+        Chore(choreName: "Clean Desk", chorePoints: 10),
+        Chore(choreName: "Laundry", chorePoints: 10),
+        Chore(choreName: "Clear Floor", chorePoints: 15),
+        Chore(choreName: "Vacuum", chorePoints: 10),
+        Chore(choreName: "Put Clothes Away", chorePoints: 10)
+    ]
+    var bathroom = [
+        Chore(choreName: "Clean Counter", chorePoints: 5),
+        Chore(choreName: "Clean Shower", chorePoints: 10),
+        Chore(choreName: "Clean Mirror", chorePoints: 5),
+        Chore(choreName: "Clean Toilet", chorePoints: 5)
+    ]
+    
+    var sections = [[Chore]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        sections = [self.kitchen, self.bedroom, self.bathroom]
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,23 +53,40 @@ class ChoreTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return self.sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let section = self.sections[section]
+        return section.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChoreCell", for: indexPath)
 
         // Configure the cell...
+        let section = self.sections[indexPath.section]
+        let currChore = section[indexPath.row]
+        cell.textLabel?.text = currChore.choreName
+        cell.detailTextLabel?.text = String(currChore.chorePoints)
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Kitchen"
+        }
+        else if section == 1 {
+            return "Bedroom"
+        }
+        else if section == 2 {
+            return "Bathroom"
+        }
+        return "Section \(section)"
+    }
 
     /*
     // Override to support conditional editing of the table view.
