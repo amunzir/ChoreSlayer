@@ -17,7 +17,9 @@ class ChoreTableViewController: UITableViewController {
     var kitchen = [
         Chore(choreName: "Clean Stove", chorePoints: 5),
         Chore(choreName: "Sweep Floor", chorePoints: 5),
-        Chore(choreName: "Clean Fridge", chorePoints: 10)
+        Chore(choreName: "Clean Sink", chorePoints: 5),
+        Chore(choreName: "Dishes", chorePoints: 10),
+        Chore(choreName: "Clean Microwave", chorePoints: 5)
     ]
     var bedroom = [
         Chore(choreName: "Organize Vanity", chorePoints: 5),
@@ -34,13 +36,30 @@ class ChoreTableViewController: UITableViewController {
         Chore(choreName: "Clean Mirror", chorePoints: 5),
         Chore(choreName: "Clean Toilet", chorePoints: 5)
     ]
+    var livingRoom = [
+        Chore(choreName: "Dust", chorePoints: 5),
+        Chore(choreName: "Vacuum", chorePoints: 10)
+    ]
+    var work = [
+        Chore(choreName: "Check Resume", chorePoints: 10),
+        Chore(choreName: "Look at Linkdin", chorePoints: 15),
+        Chore(choreName: "Look for Photo Outfit", chorePoints: 10),
+        Chore(choreName: "Check Emails", chorePoints: 5)
+    ]
+    var conditionalChores = [
+        Chore(choreName: "Take out Trash", chorePoints: 10),
+        Chore(choreName: "Clean Fridge", chorePoints: 5),
+        Chore(choreName: "Clean Vents", chorePoints: 10),
+        Chore(choreName: "Dust Ceiling Fans", chorePoints: 10),
+        Chore(choreName: "Clean Keyboard", chorePoints: 5)
+    ]
     
     var sections = [[Chore]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sections = [self.kitchen, self.bedroom, self.bathroom]
+        sections = [kitchen, bedroom, bathroom, livingRoom, work, conditionalChores]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -84,6 +103,15 @@ class ChoreTableViewController: UITableViewController {
         }
         else if section == 2 {
             return "Bathroom"
+        }
+        else if section == 3 {
+            return "Living Room"
+        }
+        else if section == 4 {
+            return "Work"
+        }
+        else if section == 5 {
+            return "Conditional Chores"
         }
         return "Section \(section)"
     }
